@@ -1,0 +1,7 @@
+SELECT * FROM names;
+insert into names (first_name, last_name) values ('lyna', 'adalet');
+insert into names (first_name, last_name) values ('iheb', 'adalet'),('john','Doe');
+UPDATE names SET last_name= 'rey' WHERE first_name= 'john';
+select* from names ;
+DELETE FROM names WHERE first_name= 'lyna';
+
