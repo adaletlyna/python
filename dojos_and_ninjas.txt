@@ -1,0 +1,29 @@
+INSERT INTO dojos (name, created_at, updated_at) VALUES ('Africa Dojo', NOW(), NOW()),('Japan Dojo', NOW(), NOW()),('Tunisia Dojo', NOW(), NOW());
+DELETE FROM dojos WHERE id IN (1, 2, 3);
+INSERT INTO dojos (name, created_at, updated_at) VALUES ('North Dojo', NOW(), NOW()),('Central Dojo', NOW(), NOW()),('Downtown Dojo', NOW(), NOW());
+SELECT * FROM dojos;
+INSERT INTO ninjas (first_name, last_name, age, dojo_id, created_at, updated_at) VALUES
+('Hikaru', 'Nakamura', 25, 4, NOW(), NOW()),
+('Asuka', 'Hayabusa', 19, 4, NOW(), NOW()),
+('Aya', 'Brea', 28, 4, NOW(), NOW());
+SELECT * FROM ninjas;
+INSERT INTO ninjas (first_name, last_name, age, dojo_id, created_at, updated_at) VALUES
+('Aki', 'Masters', 26, 5, NOW(), NOW()),
+('Sakura', 'Kasugano', 23, 5, NOW(), NOW()),
+('Gouken', 'Sensei', 45, 5, NOW(), NOW());
+INSERT INTO ninjas (first_name, last_name, age, dojo_id, created_at, updated_at) VALUES
+('Tina', 'Armstrong', 27, 6, NOW(), NOW()),
+('Hitomi', 'Chan', 24, 6, NOW(), NOW()),
+('Kasumi', 'Shinobi', 22, 6, NOW(), NOW());
+
+SELECT * FROM ninjas WHERE dojo_id = 4;
+SELECT * FROM ninjas WHERE dojo_id = 6;
+SELECT ninjas.*, dojos.name FROM ninjas 
+JOIN dojos ON ninjas.dojo_id = dojos.id WHERE ninjas.id = 6;
+SELECT ninjas.*, dojos.name  FROM ninjas JOIN dojos ON ninjas.dojo_id = dojos.id;
+
+
+
+
+
+
